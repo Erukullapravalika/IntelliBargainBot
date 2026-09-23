@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom styles */
+:root{
+  --glass: rgba(255,255,255,0.06);
+}
+body { background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%); color: #000000;; }
+
+.brand-logo { font-weight: 800; letter-spacing: -0.5px; }
+.hero-bg {
+  background-image: url('/src/assets/hero-bg.svg');
+  background-size: cover;
+  background-position: center;
+}
+.card-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  backdrop-filter: blur(6px);
+}
