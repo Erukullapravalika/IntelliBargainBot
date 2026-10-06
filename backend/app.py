@@ -130,14 +130,26 @@ def calculate_negotiation_bounds(customer, product, quantity):
 # ==============================
 # DB CONNECTION
 # ==============================
-def get_db():
+"""def get_db():
     return mysql.connector.connect(
         host="localhost",
         user="root",
         password="root",
         database="negotiation_db"
-    )
+    ) """
 
+# ==============================
+# DB CONNECTION
+# ==============================
+def get_db():
+    return mysql.connector.connect(
+        host=os.environ["DB_HOST"],
+        port=int(os.environ.get("DB_PORT", "3306")),
+        user=os.environ["DB_USER"],
+        password=os.environ["DB_PASSWORD"],
+        database=os.environ.get("DB_NAME", "defaultdb"),
+        ssl_ca=os.environ["DB_SSL_CA"]
+    )
 # ==============================
 # EXTRACT PRICE
 # ==============================
