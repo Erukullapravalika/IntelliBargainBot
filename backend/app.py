@@ -148,7 +148,7 @@ def get_db():
         user=os.environ["DB_USER"],
         password=os.environ["DB_PASSWORD"],
         database=os.environ.get("DB_NAME", "defaultdb"),
-        ssl_ca=os.environ["DB_SSL_CA"]
+        ssl_disabled=False
     )
 # ==============================
 # EXTRACT PRICE
